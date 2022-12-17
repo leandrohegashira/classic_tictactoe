@@ -79,6 +79,9 @@ def game():
 
     break
 
-printBoard(board)
-game()
-playAgain()
+def main():
+  printBoard(board)
+  game()
+  playAgain()
+
+main()
