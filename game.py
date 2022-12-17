@@ -22,10 +22,6 @@ def playAgain():
     playAgain()
   quit()  
 
-
-printBoard(board)
-
-
 def game():
 
   turn = 'x'
@@ -83,5 +79,6 @@ def game():
 
     break
 
+printBoard(board)
 game()
 playAgain()
