@@ -11,14 +11,21 @@ def printBoard(board):
   print('-+-+-')
   print(board['1'] + '|' + board['2'] + '|' + board['3'])
 
-      
+
+def playAgain():
+  repeat = input('Do you want to play again y/n? ')
+
+  while repeat == 'y':
+    game()
+  quit()  
+
+
 printBoard(board)
 
 
 def game():
 
   turn = 'x'
-  count = 0;
     
   for x in board:
     position = input('Wich position do you want to mark: ')
@@ -28,7 +35,7 @@ def game():
     printBoard(board)
     
 
-    # Check if player wons or it's a tie
+    # Check wich player won
     if(board['7'] == board['8'] == board['9'] != ' '):
       printBoard(board)
       print(f'Player "{turn}" won') 
@@ -62,11 +69,13 @@ def game():
       break
 
     if turn == 'x':
-          turn = 'o'
+      turn = 'o'
     else:
-          turn = 'x'
+      turn = 'x'
 
-  # Repeat game 
+
   
 
+
 game()
+playAgain()
